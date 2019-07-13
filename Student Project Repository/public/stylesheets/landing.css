@@ -65,20 +65,20 @@ p {
 }
 #btn1 {
   position: fixed;
-  top: 100px;
-  right: 300px;
+  top: 248px;
+  right: 647px;
 }
 #btn2 {
   position: fixed;
-  top: 300px;
-  left: 300px;
+  top: 438px;
+  left: 540px;
 }
 #btn3 {
   position: fixed;
-  top: 500px;
-  right: 300px;
+  top: 438px;
+  right: 540px;
 }
-#btn1:hover + #inbtn1 {
+/* #btn1:hover + #inbtn1 {
   background-color: white;
   box-shadow: 0px 0px 5px 5px gray;
   color: black;
@@ -92,5 +92,10 @@ p {
   background-color: white;
   box-shadow: 0px 0px 5px 5px gray;
   color: black;
-}
+} */
 
+#backline{
+  position:fixed;
+  top :37%;
+  left :33.4%;
+}
