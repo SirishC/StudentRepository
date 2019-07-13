@@ -1,0 +1,96 @@
+/* FONTS - Google Fonts. */
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Fascinate+Inline|Faster+One|Megrim|Vast+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Kanit|Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Almendra+Display|Astloch|Bangers|Stint+Ultra+Expanded&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Dosis|Teko&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap");
+
+/* _____________________Header Styles_____________________  */
+.user {
+  position: fixed;
+  top: 2.1%;
+  left: 95%;
+  fill: white;
+}
+label {
+  font-family: "Julius Sans One", sans-serif;
+  position: fixed;
+  left: 88%;
+  top: 3%;
+  font-size: 18px;
+}
+
+/*_____________________Main Body Styles_____________________  */
+p {
+  padding-top: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* button  */
+#inbtn1 {
+  font-family: "Julius Sans One", sans-serif;
+  background-color: white;
+  position: fixed;
+  top: 125px;
+  left: 300px;
+  width: 600px;
+  height: 100px;
+  -webkit-transition: 0.5s;
+  color: black;
+}
+#inbtn2 {
+  font-family: "Julius Sans One", sans-serif;
+  background-color: white;
+  position: fixed;
+  top: 320px;
+  left: 500px;
+  width: 600px;
+  height: 100px;
+  -webkit-transition: 0.5s;
+  color: black;
+}
+#inbtn3 {
+  font-family: "Julius Sans One", sans-serif;
+  background-color: white;
+  position: fixed;
+  top: 525px;
+  left: 350px;
+  width: 600px;
+  height: 100px;
+  -webkit-transition: 0.5s;
+  color: black;
+}
+#btn1 {
+  position: fixed;
+  top: 100px;
+  right: 300px;
+}
+#btn2 {
+  position: fixed;
+  top: 300px;
+  left: 300px;
+}
+#btn3 {
+  position: fixed;
+  top: 500px;
+  right: 300px;
+}
+#btn1:hover + #inbtn1 {
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px gray;
+  color: black;
+}
+#btn2:hover + #inbtn2 {
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px gray;
+  color: black;
+}
+#btn3:hover + #inbtn3 {
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px gray;
+  color: black;
+}
+

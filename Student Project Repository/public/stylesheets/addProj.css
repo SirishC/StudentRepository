@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Fascinate+Inline|Faster+One|Megrim|Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Kanit|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Almendra+Display|Astloch|Bangers|Stint+Ultra+Expanded&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel|Dosis|Teko&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+html,
+body {
+    margin: 0px 0px;
+}
+
+/* .custom-word-wrap{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+} */
+
+.add-more-div2,
+.remove-div2 {
+    margin-top: 5px;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+.github {
+    position: fixed;
+    top: 1.5%;
+    left: 95%;
+}
+
+.header {
+    font-family: 'Megrim', cursive;
+    background-color: rgb(32, 33, 36);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* text-align: center; */
+    font-size: 33px;
+    color: white;
+}
+
+.card-footer {
+    width: 100%;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(20, 21, 24);
+    color: white;
+}
+
+.year {
+    font-family: 'Teko', sans-serif;
+    font-size: 15.5px;
+    position: fixed;
+    left: 4%;
+    bottom: 3%;
+    color: #7b7d7f;
+}
+
+.amrita {
+    position: fixed;
+    left: 6.6%;
+    bottom: 3.6%;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+.logo {
+    position: fixed;
+    left: 46%;
+    bottom: 3%;
+    width: 100px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact {
+    letter-spacing: 1px;
+    position: fixed;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    left: 85%;
+    bottom: 3%;
+}
+
+.email {
+    color: #7b7d7f;
+}

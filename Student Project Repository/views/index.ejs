@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="stylesheets/template.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Student Repository</title>
+  <script>
+    $(document).ready(function () {
+      // SIGN IN 
+      $("#sbtn").click(function () {
+        $("#signup").show();
+        $("#signup").animate({
+          opacity: '1'
+        }, "slow");
+
+        $("#login").animate({
+          opacity: '0'
+        }, "slow");
+        $("#login").hide();
+      });
+      // BACK 
+      $("#bk").click(function () {
+        $("#login").show();
+        $("#signup").animate({
+          opacity: '0'
+        }, "slow");
+        $("#login").animate({
+          opacity: '1'
+        }, "slow");
+        $("#signup").hide();
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <span style="color: #4717f6; font-weight: bold;">STUDENT</span> <br>REPOSITORY
+    <a href="https://github.com/SirishC/StudentRepository"><img class="github" src="/images/svg/github_icon.svg" /></a>
+  </div>
+  <img id="main" src="/images/backimg.png">
+  <div id ="about">
+    <span id ="built">Built for</span>
+    <span id ="student">Students.</span>
+    <p id="l3"><span class="keywords">Student</span>Repository is a platform where students can <span class="keywords">search</span> other<br> students projects and journals for reference and <span class="keywords">contribute</span> their projects<br>to the repository. </p>
+  </div>
+  <div id="login">
+    <form method="POST">
+      <h2>ACCOUNT LOGIN</h2>
+      <hr>
+      <label for="email">E-MAIL</label>
+      <input type="email" name="logemail" />
+      <label for="passwd">PASSWORD</label>
+      <input type="text" name="logpassword" />
+      <% if (typeof message !== 'undefined') {%>
+      <span id="message">*<%=message %></span>
+      <% }%>
+      <button class="formbtn" formaction="/login">LOGIN</button>
+      <button type="button" class="formbtn" id="sbtn">SIGN UP</button>
+    </form>
+  </div>
+
+  <div id="signup">
+    <form method="POST">
+      <h2>ACCOUNT SIGNUP</h2>
+      <hr>
+      <label for="email">E-MAIL</label>
+      <input type="email" name="email">
+      <label for="uname">USERNAME</label>
+      <input type="text" name="username">
+      <label for="passwd">PASSWORD</label>
+      <input type="password" name="password">
+      <label for="passwd">CONFIRM PASSWORD</label>
+      <input type="password" name="passwordConf">
+      <button class="formbtn" formaction="/login">SIGN UP</button>
+      <button type="button" class="formbtn" id="bk"> BACK </button>
+    </form>
+  </div>
+</body>
+<footer>
+  <span class="year">©2019</span><span class="amrita">AMRITA VISHWA VIDYAPEETHAM</span>
+  <a href="https://www.amrita.edu"><img class="logo" src="/images/logo.png" /></a>
+
+  <span class="contact">For any queries,<br><a href="mailto:chejerlasirish@gmail.com"><span
+        class="email">@chejerlasirish@gmail.com</span></span>
+</footer>
+
+</html>

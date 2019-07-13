@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Fascinate+Inline|Faster+One|Megrim|Vast+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Kanit|Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Almendra+Display|Astloch|Bangers|Stint+Ultra+Expanded&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Dosis|Teko&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap");
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+/* _____________________Header Styles_____________________  */
+.github {
+    position: fixed;
+    top: 1.5%;
+    left: 95%;
+  }
+
+
+/*_____________________Main Body Styles_____________________  */
+
+/* Form  */
+form {
+  padding: 4% 4%;
+}
+input {
+  font-family: "Teko", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input:focus {
+  border-color: #4717f6;
+  border-style: solid;
+  border-width: 2px; 
+}
+button {
+  background-color: white;
+  border: 2px solid #4717f6;
+  border-radius: 12px;
+  line-height: 15px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 20px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #4717f6;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.formbtn {
+  display:inline;
+  margin-left: 45px;
+}
+label,h2 {
+  font-family: "Abel", sans-serif;
+  display: block;
+}
+hr {
+  color: #4717f6;
+  border-style: solid;
+}
+
+
+
+
+#login {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 25%;
+  left: 62%;
+  width: 30%;
+  height: 50%;
+  border-radius: 2%;
+  box-shadow: 0px 5px 20px 0px black;
+}
+
+#signup {
+  display: none;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  position: fixed;
+  top: 20%;
+  left: 62%;
+  width: 30%;
+  height: 66%;
+  border-radius: 2%;
+  box-shadow: 0px 5px 20px 5px black;
+}
+
+
+
+
+/* Background Image and Animation. */
+#main {
+  position: fixed;
+  left: 12%;
+  top: 150px;
+}
+#main {
+  float: left;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@-webkit-keyframes Floatingx {
+  from {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 20px);
+  }
+  to {
+    -webkit-transform: translate(0, -0px);
+  }
+}
+
+@-moz-keyframes Floating {
+  from {
+    -moz-transform: translate(0, 0px);
+  }
+  65% {
+    -moz-transform: translate(0, 20px);
+  }
+  to {
+    -moz-transform: translate(0, -0px);
+  }
+}
+
+/*  about us  */
+#about{
+  font-family: 'PT Sans', sans-serif;
+  position: fixed;
+  top :500px;
+  left:203px;
+  font-size: 20px
+}
+
+#built,#student{
+  display:block;
+  color: #0e0b16;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+}
+
+.keywords{
+  color: #4717f6;  
+}
+#message{
+  font-family: "Lato", sans-serif;
+  opacity: 1;
+  font-size: 15px;
+  display: block;
+  color: red;
+  text-align: center;
+
+}
