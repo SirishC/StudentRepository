@@ -12,6 +12,8 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var addProjRouter = require('./routes/addProj');
 var homeRouter = require('./routes/home');
+var searchProjRouter = require('./routes/searchProj');
+var myProjRouter = require('./routes/myProj');
 
 var app = express();
 
@@ -51,7 +53,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
-app.use('/addproj', addProjRouter);
+app.use('/home/addproj', addProjRouter);
+app.use('/home/searchproj', searchProjRouter);
+app.use('/home/myproj', myProjRouter);
 app.use('/home', homeRouter);
 
 
