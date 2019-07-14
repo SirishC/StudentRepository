@@ -67,17 +67,17 @@ p {
 #btn1 {
   position: fixed;
   top: 220px;
-  right: 647px;
+  right: 633px;
 }
 #btn2 {
   position: fixed;
   top: 438px;
-  left: 540px;
+  left: 520px;
 }
 #btn3 {
   position: fixed;
   top: 438px;
-  right: 540px;
+  right: 520px;
 }
 /* #btn1:hover + #inbtn1 {
   background-color: white;
