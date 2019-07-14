@@ -1,0 +1,110 @@
+/* Movement btn1 */
+#btn1{
+    float: left;
+    -webkit-animation-name: Floating1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes Floating1 {
+    from {
+      -webkit-transform: translate(0, 10px);
+    }
+    65% {
+      -webkit-transform: translate(0, 0px);
+    }
+    to {
+      -webkit-transform: translate(0, 10px);
+    }
+  }
+  
+  @-moz-keyframes Floating {
+    from {
+      -moz-transform: translate(0, -0px);
+    }
+    65% {
+      -moz-transform: translate(0, 10px);
+    }
+    to {
+      -moz-transform: translate(0, 0px);
+    }
+  }
+/* Movement bnt3 */
+
+  #btn3{
+    float: left;
+    -webkit-animation-name: Floating3;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes Floating3 {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+    65% {
+      -webkit-transform: translate(10px, 10px);
+    }
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+  
+  @-moz-keyframes Floating {
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+    65% {
+      -moz-transform: translate(10px, 10px);
+    }
+    to {
+      -moz-transform: translate(0, -0px);
+    }
+  }
+  /* Movement bnt3 */
+
+  #btn2{
+    float: left;
+    -webkit-animation-name: Floating2;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes Floating2 {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+    65% {
+      -webkit-transform: translate(-10px, 10px);
+    }
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+  
+  @-moz-keyframes Floating {
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+    65% {
+      -moz-transform: translate(10px, 10px);
+    }
+    to {
+      -moz-transform: translate(0, -0px);
+    }
+  }
