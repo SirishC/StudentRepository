@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <title>Home Page</title> 
+    <title>Home Page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="stylesheets/movement.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/template.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/landing.css">    
+    <link rel="stylesheet" type="text/css" href="stylesheets/landing.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+            $('.addproj').popover({
+                title: "Add Project", content: "Contribute to the community!",
+                trigger: "hover", delay: { show: 100, hide: 1500 }, animation: true, placement: "top"
+            });
+            $('.searchproj').popover({
+                title: "Search Project", content: "Search for millions of Papers and Journals!",
+                trigger: "hover", delay: { show: 100, hide: 1500 }, animation: true, placement: "left"
+            });
+            $('.myproj').popover({
+                title: "My Projects", content: "See your all published & bookmarked Projects!",
+                trigger: "hover", delay: { show: 100, hide: 1500 }, animation: true, placement: "right"
+            });
+        });
+    </script>
 </head>
+
 <body>
-<div class="header">
-    <span style="color: #4717f6; font-weight: bold;">STUDENT</span> <br>REPOSITORY
-    <label for="user"><%= username %></label>
-    <a href="./login/logout"><img class="user" src="images/svg/logout.svg" height="30px" width="30px"></a>
-</div>
-<div class="landing_page">
+    <div class="header" !important>
+        <span id="title" style="color: #4717f6; font-weight: bold;">STUDENT</span><br>REPOSITORY
+        <label><%= username %></label>
+        <a href="./login/logout"><img class="logout" src="images/svg/logout.svg" height="30px" width="30px"></a>
+    </div>
+    <!-- <div class="landing_page">
         <svg id="backline" height="700" width="700" viewBox="0 0 508 508">
                 <polyline points="0,0 173.31,100 346.62,0 173.31,100 173.31,300 " 
                 style="fill:none;stroke:black;stroke-width:3" />
@@ -23,13 +46,27 @@
         <a href="http://link" class="moveing" id="btn2"><img src="images/svg/searchproj.svg"></a>
         <a href="http://link" class="moveing" id="btn3"><img src="images/svg/myproj.svg"></a>
     </form>
-</div>
+</div> -->
+    <div class="landing_page">
+        <svg id="backline" height="700" width="700" viewBox="0 0 508 508">
+            <polyline points="0,0 173.31,100 346.62,0 173.31,100 173.31,300 "
+                style="fill:none;stroke:black;stroke-width:3" />
+        </svg>
+        <a href="./home/addproj" id="btn1" class="btn btn-link addproj">
+            <img src="images/svg/addproj.svg"></a>
+        <a href="./home/searchproj" id="btn2" class="btn btn-link searchproj">
+            <img src="images/svg/searchproj.svg"></a>
+        <a href="./home/myproj" id="btn3" class="btn btn-link myproj">
+            <img src="images/svg/myproj.svg"></a>
+    </div>
 </body>
 <footer>
     <span class="year">©2019</span><span class="amrita">AMRITA VISHWA VIDYAPEETHAM</span>
     <!-- <img class="logo" src="https://www.amrita.edu/sites/default/files/logo.png"> -->
     <a href="https://www.amrita.edu"><img class="logo" src="/images/logo.png"></a>
 
-    <span class="contact" >For any queries,<br><a href="mailto:chejerlasirish@gmail.com"><span class="email">@chejerlasirish@gmail.com</span></span>
+    <span class="contact">For any queries,<br><a href="mailto:chejerlasirish@gmail.com"><span
+                class="email">@chejerlasirish@gmail.com</span></span>
 </footer>
+
 </html>

@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap");
 
 /* _____________________Header Styles_____________________  */
-.user {
+.logout {
   position: fixed;
   top: 2.1%;
   left: 95%;
@@ -20,6 +20,7 @@ label {
   left: 88%;
   top: 3%;
   font-size: 18px;
+  text-align: right;
 }
 
 /*_____________________Main Body Styles_____________________  */
@@ -99,3 +100,16 @@ p {
   top :37%;
   left :33.4%;
 }
+
+/*_____________________Popper Styles_____________________  */
+.popover{
+  border-color: #e5d5e9
+  }
+  .popover-header {
+    color: #0e0b16;
+    background-color:  #debfe6ad; 
+  }
+  .popover-body {
+    color: #0e0b16;
+    background-color:  #debfe6ad;
+  }
