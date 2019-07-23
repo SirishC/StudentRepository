@@ -3,7 +3,7 @@ var router = express.Router();
 var projDetails = require("../models/projDetails");
 
 router.get("/", function(req, res, next) {
-  res.render("addProj_Test", { title: "express" });
+  res.render("addProj", { title: "express" });
 });
 
 router.post("/process_addProj", function(req, res, next) {

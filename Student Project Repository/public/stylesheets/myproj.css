@@ -28,60 +28,62 @@
   padding-left: 15px;
 }
 
-#hwreq,
-#swreq {
-  width: 100%;
-  height: 100px;
-  box-sizing: border-box;
-  border: 2px solid #4717f628;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-}
-label {
-  font-weight: bold;
-}
-input[type="text"] {
-  border: 2px solid #4717f628;
+.topbody{
+    width: 90%
 }
 
-input[type="tel"] {
-  border: 2px solid #4717f628;
+body{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    font-family: "Teko", sans-serif;
+    font-size: 18px;
 }
-input[type="email"] {
-  border: 2px solid #4717f628;
-}
-
-input[type="number"] {
-  border: 2px solid #4717f628;
-}
-
-body {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  font-family: "Teko", sans-serif;
-  font-size: 18px;
+/* Header */
+.panel-header{
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #0e0b1665;
+    padding-bottom: 10px; 
 }
 
-.custom-btn-color {
-  background-color: #4717f6;
-  color: white;
+.rounded{
+    padding-top: 10px;
+    overflow: auto;
 }
 
-.custom-btn-color:hover{
-    background-color: #3700ff;
-    color: white
+.userinfo{
+    font-family: "Lato", sans-serif; 
+    padding-top:40px;
 }
 
-.line {
-  border-color: #4717f6;
-  border-width:2px ;
+.panel-header:hover{
+    background-color:#0e0b1611;
 }
 
-.btntext{
-    color: white;
+/* Content */
+
+.panel-content{
+    border-radius: 10px 10px 10px 10px;
+    border : 2px solid #0e0b1665;
+    padding-top: 10px; 
+    margin-top: 10px;
+    font-family: "Lato", sans-serif; 
+    overflow-y: scroll;
+    height: 600px;
 }
 
-.btntext:hover{
-    color: white;
+.style-dot{
+    color: #4717f6; font-weight: bold;
+}
+
+.muted-content{
+    font-size: 14px;
+}
+
+.projinfo:hover{
+    background-color:#0e0b1611;
+    cursor: pointer;
+}
+
+.plagpercent{
+    margin-top:50px;
 }

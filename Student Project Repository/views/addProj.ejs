@@ -1,262 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
+    <title>Add Project</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/addproj.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/stylesheets/addProj.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/template.css">
+
 
 </head>
 
 <body>
+    <div class="header">
+        <a href="/home"><img src="../images/svg/back.svg"></a>
+        <div class="headline" id="slider">
+            <span><span style="color: #4717f6; font-weight: bold;">ADD</span><br>PROJECT</span>
+        </div>
+    </div>
 
-    <div class="container"> 
-        <h2>Add Project Details</h2>
-        <form id="addproj" method="POST" action="/addproj/process_addProj">
-
-            <div class="form-group">
-                <label for="title">TitleNew</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Eg : RNN for Chatbots" required>
-                <small id="titlehelp" class="form-text text-muted">Will be used as a search query while searching.</small>
-            </div>
-
-            <div class="form-group">
-                <label for="domain">Domain</label>
-                <input type="text" class="form-control" id="domain" name="domain" placeholder="Eg : Deep Learning" required>
-            </div>
-
-            <div class="checkbox">
-                <label><input type="checkbox" id="hwreqcheckbox" name="hwreqcheckbox">Any H/W Used</label>
-            </div>
-
-            <div id="hwreqtextarea">
+    <div id="addprojform">
+        <div class="container">
+            <h2><span id="title" style="color: #4717f6; font-weight: bold;">Project</span> Details</h2>
+            <hr class="line">
+            <form action="" method="POST">
+                <!-- Title Textbox -->
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Hardware Requirements</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="hwreqtextarea"></textarea>
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" placeholder="Eg. RNN for Chatbots" name="title">
                 </div>
-            </div>
 
-            <div class="checkbox">
-                <label><input type="checkbox" id="swreqcheckbox" name="swreqcheckbox">Any S/W Used</label>
-            </div>
-
-            <div id="swreqtextarea">
+                <!-- Domain Textbox -->
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea2">Software Requirements</label>
-                    <textarea class="form-control" id="exampleFormControlTextareaw" rows="3" name="swreqtextarea"></textarea>
+                    <label for="domain">Domain:</label>
+                    <input type="text" class="form-control" id="domain" placeholder="Eg. Deep Learning" name="domain">
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="guidename">Guide Name</label>
-                <div class="input-group control-group-div1 after-add-more-div1">
-                    <input type="text" name="guidenames[]" class="form-control" placeholder="Eg : Dr.John" required>
-                    <div class="input-group-btn">
-                        <button class="btn btn-success add-more-div1" type="button"><i class="glyphicon glyphicon-plus"></i>
-                        Add
-                    </button>
+                <!-- Hardware Reqs -->
+                <!-- CheckBox -->
+                <label for="hwspec">Hardware Specification:</label>
+                <div class="checkbox">
+                    <label><input type="checkbox" id="hwreqcheckbox" name="hwreqcheckbox">Any H/W Used</label>
+                </div>
+
+                <!-- Textarea -->
+                <div id="hwreqtextarea">
+                    <div class="form-group">
+                        <label for="hwreq">Hardware Requirements:</label>
+                        <textarea class="form-control" id="hwreq" rows="3" name="hwreqtextarea"></textarea>
                     </div>
-                    <!-- <div id = "guidenamehelpdiv>
-                <small id="guidenamehelp" class="form-text text-muted">Maximum only 4 guides.</small>
-                </div> -->
                 </div>
 
-                <!-- Copy Fields -->
-                <div class="copy-div1 hide">
-                    <div class="control-group-div1 input-group" style="margin-top:10px">
-                        <input type="text" name="guidenames[]" class="form-control" placeholder="Enter Name Here">
+                <!-- Software Reqs -->
+                <!-- CheckBox -->
+                <label for="swspec">Software Specification:</label>
+                <div class="checkbox">
+                    <label><input type="checkbox" id="swreqcheckbox" name="swreqcheckbox">Any S/W Used</label>
+                </div>
+
+                <!-- Textarea -->
+                <div id="swreqtextarea">
+                    <div class="form-group">
+                        <label for="swreq">Software Requirements:</label>
+                        <textarea class="form-control" id="swreq" rows="3" name="swreqtextarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Guide names Multitext Box -->
+                <div class="form-group">
+                    <label for="guidename">Guide Name:</label>
+                    <div class="input-group control-group-div1 after-add-more-div1">
+                        <input type="text" name="guidenames[]" class="form-control" placeholder="Eg : Dr.John" required>
                         <div class="input-group-btn">
-                            <button class="btn btn-danger remove-div1" type="button"><i
-                                    class="glyphicon glyphicon-remove"></i> Remove
-                        </button>
+                            <button class="btn custom-btn-color add-more-div1" type="button"><i
+                                    class="glyphicon glyphicon-add"></i>
+                                <span class="btntext">Add</span>
+                            </button>
                         </div>
+                        <!-- <div id = "guidenamehelpdiv>
+                        <small id="guidenamehelp" class="form-text text-muted">Maximum only 4 guides.</small>
+                        </div> -->
                     </div>
-                </div>
-            </div>
 
-            <div class="form-group">
-                <label for="teammembers">Team Members</label>
-                <div class="input-group control-group-div2 after-add-more-div2">
-                    <div class="form-row">
-                        <div class="form-group col col-lg-4">
-                            <label for="membername">Name</label>
-                            <input type="text" name="tmnames[]" class="form-control" placeholder="Eg : John" required>
-                        </div>
-                        <div class="form-group col col-lg-3">
-                            <label for="memberphnum">Phone number</label>
-
-                            <input type="tel" pattern="[0-9]{10}" name="tmnums[]" class="form-control" placeholder="Eg : 9994058974" required>
-                        </div>
-                        <div class="form-group col col-lg-4">
-                            <label for="memberemail">Email</label>
-
-                            <input type="email" name="tmemails[]" class="form-control" placeholder="Eg : john@gmail.com" required>
-                        </div>
-                        <div class="form-group col col-lg-1">
-                            <label for="emptylabel"></label>
-                            <div class="input-group">
-                                <button class="btn btn-success add-more-div2" type="button"><i
-                                        class="glyphicon glyphicon-plus"></i></button>
+                    <!-- Copy Fields -->
+                    <div class="copy-div1 hide">
+                        <div class="control-group-div1 input-group" style="margin-top:10px">
+                            <input type="text" name="guidenames[]" class="form-control" placeholder="Eg : Dr.John">
+                            <div class="input-group-btn">
+                                <button class="btn btn-danger remove-div1" type="button"><i
+                                        class="glyphicon glyphicon-remove"></i>
+                                    <span class="btntext">Remove</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Copy Fields -->
-                <div class="copy-div2 hide">
-                    <div class="control-group-div2 input-group" style="margin-top:10px">
-                        <div class="form-row">
-                            <div class="form-group col-lg-4">
+                <!-- Team Members info multi textbox -->
+
+                <div class="form-group">
+                    <label for="teammembers">Team Members:</label>
+                    <div class="input-group control-group-div2 after-add-more-div2">
+                        <div class="form-row" style="width: 135%">
+                            <div class="form-group col col-lg-4">
                                 <label for="membername">Name</label>
-                                <input type="text" name="tmnames[]" class="form-control" placeholder="Eg : John" >
+                                <input type="text" name="tmnames[]" class="form-control" placeholder="Eg : John"
+                                    required>
                             </div>
-                            <div class="form-group col-lg-3">
+                            <div class="form-group col col-lg-3">
                                 <label for="memberphnum">Phone number</label>
 
-                                <input type="tel" pattern="[0-9]{10}" name="tmnums[]" class="form-control" placeholder="Eg : 9994058974" >
+                                <input type="tel" pattern="[0-9]{10}" name="tmnums[]" class="form-control"
+                                    placeholder="Eg : 9876543210" required>
                             </div>
-                            <div class="form-group col-lg-4">
+                            <div class="form-group col col-lg-4">
                                 <label for="memberemail">Email</label>
 
-                                <input type="email" name="tmemails[]" class="form-control" placeholder="Eg : john@gmail.com" >
+                                <input type="email" name="tmemails[]" class="form-control"
+                                    placeholder="Eg : john@gmail.com" required>
                             </div>
-                            <div class="form-group col-lg-1">
+                            <div class="form-group col col-lg-1">
                                 <label for="emptylabel"></label>
                                 <div class="input-group">
-                                    <button class="btn btn-danger remove-div2" type="button"><i
-                                            class="glyphicon glyphicon-remove"></i></button>
+                                    <button class="btn custom-btn-color add-more-div2" type="button"
+                                        style="margin-top: 4px">
+                                        <span class="glyphicon glyphicon-plus custom-btn-color"
+                                            aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copy Fields -->
+                    <div class="copy-div2 hide">
+                        <div class="control-group-div2 input-group" style="margin-top:10px">
+                            <div class="form-row" style="width: 135%">
+                                <div class="form-group col-lg-4">
+                                    <label for="membername">Name</label>
+                                    <input type="text" name="tmnames[]" class="form-control" placeholder="Eg : John">
+                                </div>
+                                <div class="form-group col-lg-3">
+                                    <label for="memberphnum">Phone number</label>
+
+                                    <input type="tel" pattern="[0-9]{10}" name="tmnums[]" class="form-control"
+                                        placeholder="Eg : 9876543210">
+                                </div>
+                                <div class="form-group col-lg-4">
+                                    <label for="memberemail">Email</label>
+
+                                    <input type="email" name="tmemails[]" class="form-control"
+                                        placeholder="Eg : john@gmail.com">
+                                </div>
+                                <div class="form-group col-lg-1">
+                                    <label for="emptylabel"></label>
+                                    <div class="input-group">
+                                        <button class="btn btn-danger remove-div2" type="button"
+                                            style="margin-top: 4px">
+                                            <i class="glyphicon glyphicon-remove"></i></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="row form-group">
-                <div class="col-md-4">
-                    <label for="Abstract">Abstract</label>
-
-                    <div class="input-group">
-                        <span class="input-group-btn">
-      <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".pdf,.doc">
+                <!-- File Uploads -->
+                <!-- Abstract -->
+                <label for="abstract">Abstract:</label>
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn custom-btn-color">
+                            <i class=" glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                class="form-control abstractcontrol-file" name="abstract" style="display: none;">
                         </span>
-                        <div class="custom-word-wrap">
-                        <span class="form-control"></span>
+                    </label>
+                    <input type="text" class="form-control abstractfile-name" placeholder="abstract.pdf" readonly>
+                </div>
+
+                <!-- Team members Info -->
+                <br>
+                <label for="teaminfo">Team members info:</label>
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn custom-btn-color">
+                            <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                class="form-control teaminfocontrol-file" name="teaminfo" style="display: none;">
+                        </span>
+                    </label>
+                    <input type="text" class="form-control teaminfofile-name" placeholder="teaminfo.pdf" readonly>
+                </div>
+
+                <!-- Code (Files) -->
+                <br>
+                <label for="code">Code (Files as .zip):</label>
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn custom-btn-color">
+                            <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                class="form-control codecontrol-file" name="code" style="display: none;">
+                        </span>
+                    </label>
+                    <input type="text" class="form-control codefile-name" placeholder="code.zip" readonly>
+                </div>
+
+                <!-- Hardware/Software Spec -->
+                <br>
+                <label for="hwswspec">HW/SW Spec:</label>
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn custom-btn-color">
+                            <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                class="form-control hwswspeccontrol-file" name="code" style="display: none;">
+                        </span>
+                    </label>
+                    <input type="text" class="form-control hwswspecfile-name" placeholder="hwswspec.pdf" readonly>
+                </div>
+
+                <!-- Report Document -->
+                <br>
+                <label for="report">Report Document:</label>
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn custom-btn-color">
+                            <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                class="form-control reportcontrol-file" name="code" style="display: none;">
+                        </span>
+                    </label>
+                    <input type="text" class="form-control reportfile-name" placeholder="report.pdf" readonly>
+                </div>
+
+                <!-- PPT's -->
+                <br>
+                <label for="ppt">Presentations (PPT's):</label>
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn custom-btn-color">
+                            <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                class="form-control pptcontrol-file" name="code" style="display: none;">
+                        </span>
+                    </label>
+                    <input type="text" class="form-control pptfile-name" placeholder="project.ppt" readonly>
+                </div>
+
+                <!-- Plag Report -->
+                <br>
+                <label for="plag">Plagiarism:</label>
+                <div class="row form-group">
+                    <div class="col-md-8">
+                        <label for="report">Report:</label>
+                        <div class="input-group">
+                            <label class="input-group-btn">
+                                <span class="btn custom-btn-color">
+                                    <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                        class="form-control plagcontrol-file" name="code" style="display: none;">
+                                </span>
+                            </label>
+                            <input type="text" class="form-control plagfile-name" placeholder="plagreport.pdf" readonly>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="teammembersinfo">Team Members info</label>
-
-                    <div class="input-group">
-                        <span class="input-group-btn">
-            <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".pdf,.doc" >
-                        </span>
-                        <span class="form-control"></span>
+                    <div class="col-md-4">
+                        <label for="percentage">Percentage:</label>
+                        <input type="number" min="1" max="100" class="form-control" id="plag_percent" name="plagpercent"
+                            required>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <label for="code">Code (as .zip)</label>
 
+                <!-- Journal or Research Paper -->
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label for="paper">Research Papers Submitted:</label>
+                        <div class="input-group">
+                            <label class="input-group-btn">
+                                <span class="btn custom-btn-color">
+                                    <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                        class="form-control papercontrol-file" name="code" style="display: none;">
+                                </span>
+                            </label>
+                            <input type="text" class="form-control paperfile-name" placeholder="research-paper.pdf"
+                                readonly>
+                        </div>
+                    </div>
+                    <label for="proposal">Proposals Submitted:</label>
                     <div class="input-group">
-                        <span class="input-group-btn">
-            <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".zip,.rar">
-                        </span>
-                        <span class="form-control" style="overflow: hidden;text-overflow: ellipsis;"></span>
+                        <label class="input-group-btn">
+                            <span class="btn custom-btn-color">
+                                <i class="glyphicon glyphicon-upload custom-btn-color"></i> <input type="file"
+                                    class="form-control proposalcontrol-file" name="code" style="display: none;">
+                            </span>
+                        </label>
+                        <input type="text" class="form-control proposalfile-name" placeholder="proposals.pdf" readonly>
                     </div>
                 </div>
-            </div>
 
+                <!-- Submit Button -->
+                <br>
+                <div class="text-center">
 
-            <div class="row form-group">
-                <div class="col-md-4">
-                    <label for="hwswspec">H/W & S/W Specifications</label>
+                    <button type="submit" class="btn custom-btn-color btn-lg "><i
+                            class=" glyphicon glyphicon-ok custom-btn-color"></i> <span class="btntext">
+                            Submit</span></button>
 
-                    <div class="input-group">
-                        <span class="input-group-btn">
-      <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none" type="file" accept=".pdf,.doc">
-                        </span>
-                        <span class="form-control"></span>
-                    </div>
                 </div>
-                <div class="col-md-4">
-                    <label for="report">Report</label>
-
-                    <div class="input-group">
-                        <span class="input-group-btn">
-            <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".pdf,.doc">
-                        </span>
-                        <span class="form-control"></span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="relatedppt">PPT's</label>
-
-                    <div class="input-group">
-                        <span class="input-group-btn">
-            <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".ppt,.pptx">
-                        </span>
-                        <span class="form-control"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row form-group">
-                <div class="col-md-8">
-                    <label for="relatedppt">Plagiarism Report</label>
-                    <div class="input-group">
-                        <span class="input-group-btn">
-          <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                        <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".doc,.pdf">
-                        </span>
-                        <span class="form-control"></span>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="title">Percentage</label>
-                    <input type="number" min="1" max="100" class="form-control" id="plag_percent" name="plagpercent" required >
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="relatedppt">Research Papers submitted (if any)</label>
-                <div class="input-group">
-                    <span class="input-group-btn">
-      <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                    <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".doc,.pdf">
-                    </span>
-                    <span class="form-control"></span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="relatedppt">Proposals submitted (if any)</label>
-                <div class="input-group">
-                    <span class="input-group-btn">
-      <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
-                    <input name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" type="file" accept=".doc,.pdf">
-                    </span>
-                    <span class="form-control"></span>
-                </div>
-            </div>
-
-
-            <button type="submit" class="btn btn-default" style="margin-top:20px">Submit</button>
-        </form>
+            </form>
+        </div>
     </div>
 
-
+    </form>
+    </div>
 </body>
+<!-- Click Checkbox to view Textarea -->
 <script type="text/javascript">
     //Link checkbox and Textarea START
     var form = $('#addproj'),
@@ -268,7 +326,7 @@
     hwreqtextarea.hide();
     swreqtextarea.hide();
 
-    hwreqcheckbox.on('click', function() {
+    hwreqcheckbox.on('click', function () {
         if ($(this).is(':checked')) {
             hwreqtextarea.show();
             hwreqtextarea.find('textarea').attr('required', true);
@@ -278,23 +336,25 @@
         }
     });
 
-    swreqcheckbox.on('click', function() {
-            if ($(this).is(':checked')) {
-                swreqtextarea.show();
-                swreqtextarea.find('input').attr('required', true);
-            } else {
-                swreqtextarea.hide();
-                swreqtextarea.find('input').attr('required', false);
-            }
-        })
+    swreqcheckbox.on('click', function () {
+        if ($(this).is(':checked')) {
+            swreqtextarea.show();
+            swreqtextarea.find('input').attr('required', true);
+        } else {
+            swreqtextarea.hide();
+            swreqtextarea.find('input').attr('required', false);
+        }
+    })
         //Link checkbox and Textarea END
 </script>
+
+<!-- Add More on Plus Btn (Guidenames) -->
 <script type="text/javascript">
     //Add more guidenames START
     var countguidenames = 0;
-
-    $(document).ready(function() {
-        $(".add-more-div1").click(function() {
+    $(".hide").hide();
+    $(document).ready(function () {
+        $(".add-more-div1").click(function () {
             if (countguidenames < 3) {
                 countguidenames = countguidenames + 1;
                 var html1 = $(".copy-div1").html();
@@ -304,7 +364,7 @@
             }
         });
 
-        $("body").on("click", ".remove-div1", function() {
+        $("body").on("click", ".remove-div1", function () {
             countguidenames = countguidenames - 1;
             $(this).parents(".control-group-div1").remove();
         });
@@ -312,12 +372,14 @@
     });
     //Add more guidenames END
 </script>
+
+<!-- Add More on Plus Btn (Teammember Info) -->
 <script type="text/javascript">
     //Add more Team members START
     var countteammember = 0;
 
-    $(document).ready(function() {
-        $(".add-more-div2").click(function() {
+    $(document).ready(function () {
+        $(".add-more-div2").click(function () {
             if (countteammember < 3) {
                 countteammember = countteammember + 1;
                 var html2 = $(".copy-div2").html();
@@ -327,13 +389,63 @@
             }
         });
 
-        $("body").on("click", ".remove-div2", function() {
+        $("body").on("click", ".remove-div2", function () {
             countteammember = countteammember - 1;
             $(this).parents(".control-group-div2").remove();
         });
 
     });
     //Add more Team members END
+</script>
+
+<!-- File Uploads -->
+<script>
+    //Abstract
+    $(".abstractcontrol-file").change(function () {
+        var filename = $(".abstractcontrol-file").val().split("\\").pop();
+        $(".abstractfile-name").val(filename);
+    });
+    //Team memberinfo
+    $(".teaminfocontrol-file").change(function () {
+        var filename = $(".teaminfocontrol-file").val().split("\\").pop();
+        $(".teaminfofile-name").val(filename);
+    });
+    //Code
+    $(".codecontrol-file").change(function () {
+        var filename = $(".codecontrol-file").val().split("\\").pop();
+        $(".codefile-name").val(filename);
+    });
+    //Hard~Soft Ware Spec
+    $(".hwswspeccontrol-file").change(function () {
+        var filename = $(".hwswspeccontrol-file").val().split("\\").pop();
+        $(".hwswspecfile-name").val(filename);
+    });
+    //Report
+    $(".reportcontrol-file").change(function () {
+        var filename = $(".reportcontrol-file").val().split("\\").pop();
+        $(".reportfile-name").val(filename);
+    });
+    //PPT
+    $(".pptcontrol-file").change(function () {
+        var filename = $(".pptcontrol-file").val().split("\\").pop();
+        $(".pptfile-name").val(filename);
+    });
+    //Plagiarism
+    $(".plagcontrol-file").change(function () {
+        var filename = $(".plagcontrol-file").val().split("\\").pop();
+        $(".plagfile-name").val(filename);
+    });
+    //Research paper
+    $(".papercontrol-file").change(function () {
+        var filename = $(".papercontrol-file").val().split("\\").pop();
+        $(".paperfile-name").val(filename);
+    });
+    //Proposals
+    $(".proposalcontrol-file").change(function () {
+        var filename = $(".proposalcontrol-file").val().split("\\").pop();
+        $(".proposalfile-name").val(filename);
+    });
+
 </script>
 
 </html>

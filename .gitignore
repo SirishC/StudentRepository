@@ -6,8 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-<<<<<<< HEAD
-=======
 # Logs
 logs
 *.log
@@ -16,7 +14,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
->>>>>>> ceeae0256d62a9b9f37f27ba7e485c013f1434f2
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
