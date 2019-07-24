@@ -14,6 +14,7 @@ var addProjRouter = require('./routes/addProj');
 var homeRouter = require('./routes/home');
 var searchProjRouter = require('./routes/searchProj');
 var myProjRouter = require('./routes/myProj');
+var viewProjRouter = require('./routes/viewProj');
 
 var app = express();
 
@@ -56,6 +57,7 @@ app.use('/login', loginRouter);
 app.use('/home/addproj', addProjRouter);
 app.use('/home/searchproj', searchProjRouter);
 app.use('/home/myproj', myProjRouter);
+app.use('/home/viewproj', viewProjRouter);
 app.use('/home', homeRouter);
 
 
