@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Fascinate+Inline|Faster+One|Megrim|Vast+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Kanit|Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Almendra+Display|Astloch|Bangers|Stint+Ultra+Expanded&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Dosis|Teko&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+
+.header {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #0e0b16;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    box-shadow: 0px 3px 800px 0px #a239ca;
+    color: #e7dfdd;
+    line-height: 1;
+    z-index: 1000;
+    display: inline-flex;
+}
+
+.headline {
+    padding-left: 15px;
+}
+
+body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "Teko", sans-serif;
+    font-size: 18px;
+}
+
+.line {
+    border-color: #4717f6;
+    border-width: 2px;
+}
+
+.memberinfo {
+    display: inline-flex;
+    font-size: 20px;
+
+}
+
+.teammemberinfo {
+    text-align: center;
+    border-right: 2px solid #4717f6;
+}
+
+.guideinfo {
+    text-align: center;
+}
+
+.viewabstract {
+    width: 100%;
+    height: 400px;
+}
+
+.filedownloads {
+    text-align: center;
+}
+
+.downloadbtns {
+    cursor: pointer;
+}
