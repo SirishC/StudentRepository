@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <title>Search Project</title>
     <meta charset="utf-8">
@@ -19,33 +20,39 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <style>
-        .headline{
-            padding-left: 15px;  
+        .headline {
+            padding-left: 15px;
         }
-        .header{
+
+        .header {
             display: inline-flex;
         }
-        body{
+
+        body {
             padding: 90px 75px;
         }
-        .search{
+
+        .search {
             width: 100%;
             display: inline-flex;
         }
-        img{
+
+        img {
             border-width: 1px;
         }
-        #window{
+
+        #window {
             overflow-y: scroll;
             position: absolute;
             width: 90%;
-            height:80%;
+            height: 80%;
             padding: 12px 20px;
             border-width: 1px;
             border-style: solid;
             border-color: gray;
             border-radius: 4px;
         }
+
         .projBlock {
             width: 100%;
         }
@@ -54,70 +61,62 @@
 
 <body>
     <div class="header">
-        <a href="/home"><img  src="../images/svg/back.svg"></a>
-        <div class ="headline" id="slider">
-        <span><span style="color: #4717f6; font-weight: bold;">SEARCH</span><br>PROJECT</span>        
+        <a href="/home"><img src="../images/svg/back.svg"></a>
+        <div class="headline" id="slider">
+            <span><span style="color: #4717f6; font-weight: bold;">SEARCH</span><br>PROJECT</span>
         </div>
     </div>
     <div class="search">
-    <img src="../images/svg/searchbtn.svg">
-    <input type="text" placeholder="Search">
+        <img src="../images/svg/searchbtn.svg">
+        <input type="text" placeholder="Search">
     </div>
 
     <div id="window">
         <div class="projBlock">
-            <div class ="inner" id = "left">
-                    <div class="row panel-content">
-                            <div class="col-12 ">
-                                <% var i;
+            <div class="inner" id="left">
+                <div class="row panel-content">
+                    <div class="col-12 ">
+                        <% var i;
                                 for (i = 0; i<9; i++) { %>
-                                        <div class="row eachproj-content projinfo">
-                                        <div class="col-8 ">
-                                            <h5>
-                                                RNN for Chatbots<br>
-                                                <small class="text-muted muted-content">Deep Learning</small>
-                                                <br>
-                                                <h5>
-                                                    <!-- <span style="font-size: 15px">Hardware Specification : </span><small
-                                                        class="text-muted muted-content">~NIL~</small>
-                                                    <br>
-                                                    <span style="font-size: 15px">Software Specification : </span><small
-                                                        class="text-muted muted-content">Python, TensorFlow</small>
-                                                    <br> -->
-                                                    <span style="font-size: 15px">By : </span><small class="text-muted muted-content">Sirish<span
-                                                            class="style-dot"> • </span>
-                                                        RaviBalg<span class="style-dot"> • </span>Vigneswar<span class="style-dot"> •
-                                                        </span>Gokul</small>
-                                                    <br>
-                                                </h5>
-                                            </h5>
-                                        </div>
-                                        <div class="col- plagpercent">
-                                                <span style="font-size: 13px">View Abstract</span>
-                                                <div>
-                                                     <a href="/"><img style="padding-left: 20px;" src="../images/svg/file.svg"></a>
-                                                      </div>
-                                        </div>
+                            <div class="row eachproj-content projinfo">
+                                <div class="col-8 ">
+                                    <h5>
+                                        RNN for Chatbots<br>
+                                        <small class="text-muted muted-content">Deep Learning</small>
+                                        <br>
+                                        <h5>
+                                            <span style="font-size: 15px">By : </span>
+                                            <small
+                                                    class="text-muted muted-content">Sirish<span
+                                                        class="style-dot"> • </span>
+                                                RaviBalg<span class="style-dot"> • </span>Vigneswar<span
+                                                        class="style-dot">    •
+                                            </span>Gokul
+                                            </small>
+                                            <br>
+                                        </h5>
+                                    </h5>
+                                </div>
+                                <div class="col- plagpercent">
+                                    <span style="font-size: 13px">View Abstract</span>
+                                    <div>
+                                        <a href="/"><img style="padding-left: 20px;" src="../images/svg/file.svg"></a>
                                     </div>
-                                    <hr style="border-color: #4717f6;border-width: 1.5px">
-                                <% } %>
-                                
+                                </div>
                             </div>
-                
-                        </div>
+                            <hr style="border-color: #4717f6;border-width: 1.5px">
+                        <% } %>
+
+                    </div>
+
+                </div>
 
             </div>
-            <div class ="inner" id ="right">
-                
+            <div class="inner" id="right">
+
             </div>
         </div>
     </div>
 </body>
-<!-- <footer>
-    <span class="year">©2019</span><span class="amrita">AMRITA VISHWA VIDYAPEETHAM</span>
-    <a href="https://www.amrita.edu"><img class="logo" src="/images/logo.png"></a>
-    <span class="contact">For any queries,<br><a href="mailto:chejerlasirish@gmail.com"><span
-                class="email">@chejerlasirish@gmail.com</span></span>
-</footer> -->
 
 </html>

@@ -21,13 +21,12 @@
 </head>
 
 <body>
-        <div class="header">
-                <a href="/home"><img  src="../images/svg/back.svg"></a>
-                <div class ="headline" id="slider">
-                <span><span style="color: #4717f6; font-weight: bold;">MY</span><br>PROJECT</span>        
-                </div>
-            </div>
-
+<div class="header">
+    <a href="/home"><img src="../images/svg/back.svg"></a>
+    <div class="headline" id="slider">
+        <span><span style="color: #4717f6; font-weight: bold;">MY</span><br>PROJECT</span>
+    </div>
+</div>
     <div class="container">
         <div class="row panel-header">
             <div class="col-6 userinfo">
@@ -43,49 +42,61 @@
                 </div>
             </div>
         </div>
-
         <div class="row panel-content">
             <div class="col-12 ">
                 <% var i;
                 for (i = 0; i<9; i++) { %>
-                        <div class="row eachproj-content projinfo">
-                        <div class="col-8 ">
+                    <div class="row eachproj-content projinfo" onclick="window.location.href='./viewproj'">
+                        <div class="col-6 ">
                             <h5>
                                 RNN for Chatbots<br>
                                 <small class="text-muted muted-content">Deep Learning</small>
                                 <br>
                                 <h5>
-                                    <span style="font-size: 15px">Hardware Specification : </span><small
-                                        class="text-muted muted-content">~NIL~</small>
+                                    <span style="font-size: 15px">Hardware Specification : </span>
+                                    <small
+                                            class="text-muted muted-content">~NIL~
+                                    </small>
                                     <br>
-                                    <span style="font-size: 15px">Software Specification : </span><small
-                                        class="text-muted muted-content">Python, TensorFlow</small>
+                                    <span style="font-size: 15px">Software Specification : </span>
+                                    <small
+                                            class="text-muted muted-content">Python, TensorFlow
+                                    </small>
                                     <br>
-                                    <span style="font-size: 15px">By : </span><small class="text-muted muted-content">Sirish<span
-                                            class="style-dot"> • </span>
+                                    <span style="font-size: 15px">By : </span>
+                                    <small
+                                            class="text-muted muted-content">Sirish<span class="style-dot"> • </span>
                                         RaviBalg<span class="style-dot"> • </span>Vigneswar<span class="style-dot"> •
-                                        </span>Gokul</small>
+                                    </span>Gokul
+                                    </small>
                                     <br>
                                 </h5>
                             </h5>
                         </div>
-                        <div class="col-4 plagpercent">
-                                <span style="font-size: 13px">Plagiarism <br>Percentage</span>
-                                <div class="progress">
-                                        <div class="progress-bar progress-bar-striped" style="width:<%= (i+1)*10 %>%"><%= (i+1)*10%>%</div>
-                                      </div>
+                        <div class="col-3 plagpercent">
+                            <span style="font-size: 13px;line-height:70%;">Plagiarism<br>Percentage</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" style="width:<%= (i + 1) * 10 %>%">
+                                    <%= (i + 1) * 10 %>%
+                                </div>
+                            </div>
                         </div>
+                        <% if(i % 2 == 0){ %>
+                            <div class="col-3 publishedinfo">
+                                <img src="../images/svg/published.svg">
+                            </div>
+                        <% } else { %>
+                            <div class="col-3 publishedinfo">
+                                <img src="../images/svg/waiting.svg">
+
+                            </div>
+                        <% } %>
                     </div>
                     <hr style="border-color: #4717f6;border-width: 1.5px">
                 <% } %>
-                
             </div>
-
         </div>
-
-
     </div>
-
 </body>
 
 </html>
