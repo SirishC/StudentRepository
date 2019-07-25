@@ -6,6 +6,7 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
+var helmet = require("helmet");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,7 +19,9 @@ var viewProjRouter = require('./routes/viewProj');
 
 var app = express();
 
-// view engine setu p
+//Setting up "response headers" for security
+app.use(helmet());
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
