@@ -36,6 +36,34 @@
 
     });
   </script>
+
+  <!--  <script>-->
+  <!--    $(document).ready(function(){-->
+  <!--      //binding click events to elements-->
+
+  <!--      var locationHash = window.location.hash.substring(1);-->
+  <!--      if(locationHash == 'signup') {-->
+  <!--        $('#sbtn').trigger('click');-->
+  <!--      }-->
+  <!--      // }else if(locationHash == 'signup'){-->
+  <!--      //   $('#menu-page2').trigger('click');-->
+  <!--      // }-->
+  <!--    });-->
+  <!--  </script>-->
+
+  <script>
+    $(document).ready(function () {
+      //binding click events to elements
+
+      <% if (typeof signupmsg !== "undefined") { %>
+      $('#sbtn').trigger('click');
+      <% } else { %>
+      $('#bk').trigger('click');
+      <% } %>
+
+    });
+  </script>
+
 </head>
 
 <body>
@@ -60,10 +88,12 @@
       <label for="email">E-MAIL</label>
       <input type="email" name="logemail" />
       <label for="passwd">PASSWORD</label>
-      <input type="text" name="logpassword" />
-      <% if (typeof message !== 'undefined') {%>
-      <span id="message">*<%=message %></span>
-      <% }%>
+      <input type="password" name="logpassword"/>
+      <% if(typeof loginmsg !== 'undefined') { %>
+        <span id="message"><%= loginmsg %></span>
+      <% } else { %>
+        <span id="message">Fill the fields!</span>
+      <% } %>
       <button class="formbtn" formaction="/login">LOGIN</button>
       <button type="button" class="formbtn" id="sbtn">SIGN UP</button>
     </form>
@@ -81,6 +111,11 @@
       <input type="password" name="password">
       <label for="passwd">CONFIRM PASSWORD</label>
       <input type="password" name="passwordConf">
+      <% if(typeof signupmsg !== 'undefined') { %>
+        <span id="message"><%= signupmsg %></span>
+      <% } else { %>
+        <span id="message">Fill all details!</span>
+      <% } %>
       <button class="formbtn" formaction="/login">SIGN UP</button>
       <button type="button" class="formbtn" id="bk"> BACK </button>
     </form>
@@ -90,8 +125,8 @@
   <span class="year">©2019</span><span class="amrita">AMRITA VISHWA VIDYAPEETHAM</span>
   <a href="https://www.amrita.edu"><img class="logo" src="/images/logo.png" /></a>
 
-  <span class="contact">For any queries,<br><a href="mailto:chejerlasirish@gmail.com"><span
-              class="email">@chejerlasirish@gmail.com</span></a></span>
+  <span class="contact">For any queries,<br><a href="mailto:chejerlasirish@gmail.com">
+             <span class="email">@chejerlasirish@gmail.com</span></a></span>
 </footer>
 
 </html>

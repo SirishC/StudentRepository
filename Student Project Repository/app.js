@@ -21,6 +21,7 @@ var app = express();
 
 //Setting up "response headers" for security
 app.use(helmet());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

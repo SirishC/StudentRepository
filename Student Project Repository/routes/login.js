@@ -9,20 +9,31 @@ router.post('/', function(req, res, next) {
         req.body.password &&
         req.body.passwordConf) {
 
+        User.findOne({
+            username: req.body.username
+        }, function (err, user) {
+            if (err) return (err);
+            else if (user) {
+                return res.render('index', {signupmsg: 'Already User Exists!'});
+            }
+        });
+
         console.log("User is registering");
         //Registering is processing
         if (req.body.password !== req.body.passwordConf) {
-            var err = new Error("Passwords do not match!");
-            err.status = 404;
-            res.send("Passwords do not match");
-            return next(err);
+            // var err = new Error("Passwords do not match!");
+            // err.status = 404;
+            // res.send("Passwords do not match");
+            // return next(err);
+            return res.render('index', {signupmsg: 'Passwords do not match!'});
+
         }
 
         var userData = {
             email: req.body.email,
             username: req.body.username,
             password: req.body.password
-        }
+        };
 
         User.create(userData, function(err, user) {
             if (err) {
@@ -32,6 +43,7 @@ router.post('/', function(req, res, next) {
                 return res.redirect('/home');
             }
         });
+
     } else if (req.body.logemail && req.body.logpassword) {
 
         console.log("User is logging IN");
@@ -39,16 +51,18 @@ router.post('/', function(req, res, next) {
             if (err || !user) {
                 //var err = new Error("Credentials do not match");
                 //err.status = 404;
-                return res.render('index', { message: 'Credentials do not match' });
+                return res.render('index', {loginmsg: 'Credentials do not match!'});
             } else {
                 req.session.userId = user._id;
                 return res.redirect('/home');
             }
         })
     } else {
-        var err = new Error("All fields required");
-        err.status = 404;
-        return next(err);
+        // var err = new Error("Fill all fields!");
+        // err.status = 404;
+        // return next(err);
+        return res.render('index', {loginmsg: 'Fill all fields!', signupmsg: 'Fill all fields!'});
+
     }
 });
 
