@@ -10,8 +10,7 @@ var projSchema = new mongoose.Schema({
     tmEmail : [String],
     tmNum : [String],
     plagPercent : Number,
-    keywords : [String],
-    author : Object,
+    author: String,
 });
 
 
