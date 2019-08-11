@@ -9,16 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
     <style>
         .headline {
             padding-left: 15px;
@@ -60,63 +60,68 @@
 </head>
 
 <body>
-    <div class="header">
-        <a href="/home"><img src="../images/svg/back.svg"></a>
-        <div class="headline" id="slider">
-            <span><span style="color: #4717f6; font-weight: bold;">SEARCH</span><br>PROJECT</span>
-        </div>
+<div class="header">
+    <a href="/home"><img src="../images/svg/back.svg"></a>
+    <div class="headline" id="slider">
+        <span><span style="color: #4717f6; font-weight: bold;">SEARCH</span><br>PROJECT</span>
     </div>
-    <div class="search">
-        <img src="../images/svg/searchbtn.svg">
-        <input type="text" placeholder="Search">
-    </div>
+</div>
 
-    <div id="window">
-        <div class="projBlock">
-            <div class="inner" id="left">
-                <div class="row panel-content">
-                    <div class="col-12 ">
-                        <% var i;
-                                for (i = 0; i<9; i++) { %>
-                            <div class="row eachproj-content projinfo">
-                                <div class="col-8 ">
+<div class="search">
+    <form action="./searchproj" method="post">
+        <img src="../images/svg/searchbtn.svg">
+        <input type="text" placeholder="Search" name="searchQuery"/>
+        <input type="submit">
+
+    </form>
+</div>
+
+<div id="window">
+    <div class="projBlock">
+        <div class="inner" id="left">
+            <div class="row panel-content">
+                <div class="col-12 ">
+                    <% var i;
+                    if(typeof data !== "undefined"){
+                    for (i = 0; i < data.length; i++) { %>
+                        <div class="row eachproj-content projinfo">
+                            <div class="col-8 ">
+                                <h5>
+                                    <%= data[i].title %><br>
+                                    <small class="text-muted muted-content"><%= data[i].domain %></small>
+                                    <br>
                                     <h5>
-                                        RNN for Chatbots<br>
-                                        <small class="text-muted muted-content">Deep Learning</small>
+                                        <span style="font-size: 15px">By : </span>
+                                        <small
+                                                class="text-muted muted-content">
+                                            <% for (var j = 0;j < data[i].tmName.length;j++) { %>
+                                                <%= data[i].tmName[j] %><span class="style-dot"> • </span>
+                                            <% } %>
+                                        </small>
                                         <br>
-                                        <h5>
-                                            <span style="font-size: 15px">By : </span>
-                                            <small
-                                                    class="text-muted muted-content">Sirish<span
-                                                        class="style-dot"> • </span>
-                                                RaviBalg<span class="style-dot"> • </span>Vigneswar<span
-                                                        class="style-dot">    •
-                                            </span>Gokul
-                                            </small>
-                                            <br>
-                                        </h5>
                                     </h5>
-                                </div>
-                                <div class="col- plagpercent">
-                                    <span style="font-size: 13px">View Abstract</span>
-                                    <div>
-                                        <a href="/"><img style="padding-left: 20px;" src="../images/svg/file.svg"></a>
-                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col- plagpercent">
+                                <span style="font-size: 13px">View Abstract</span>
+                                <div>
+                                    <a href="/"><img style="padding-left: 20px;" src="../images/svg/file.svg"></a>
                                 </div>
                             </div>
-                            <hr style="border-color: #4717f6;border-width: 1.5px">
-                        <% } %>
-
-                    </div>
+                        </div>
+                        <hr style="border-color: #4717f6;border-width: 1.5px">
+                    <% }} %>
 
                 </div>
 
             </div>
-            <div class="inner" id="right">
 
-            </div>
+        </div>
+        <div class="inner" id="right">
+
         </div>
     </div>
+</div>
 </body>
 
 </html>

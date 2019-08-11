@@ -7,6 +7,8 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
 var helmet = require("helmet");
+var fileUpload = require("express-fileupload");
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,6 +20,10 @@ var myProjRouter = require('./routes/myProj');
 var viewProjRouter = require('./routes/viewProj');
 
 var app = express();
+
+
+//For file uploads
+app.use(fileUpload());
 
 //Setting up "response headers" for security
 app.use(helmet());
@@ -84,8 +90,8 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-app.listen(process.env.port | 3000);
+app.listen(process.env.port | 4000);
 
-console.log("Listening on port 3000...");
+console.log("Listening on port 4000...");
 
 module.exports = app;

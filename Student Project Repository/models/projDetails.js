@@ -13,8 +13,7 @@ var projSchema = new mongoose.Schema({
     author: String,
 });
 
-
-
 var projDetails = mongoose.model('projDetails',projSchema);
+
 module.exports = projDetails;
 

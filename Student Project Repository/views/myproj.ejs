@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,76 +27,78 @@
         <span><span style="color: #4717f6; font-weight: bold;">MY</span><br>PROJECT</span>
     </div>
 </div>
-    <div class="container">
-        <div class="row panel-header">
-            <div class="col-6 userinfo">
-                <h3>
-                    Sirish C
-                    <small class="text-muted"><span class="style-dot">•</span>
-                        chejerlasirish@gmail.com</small>
-                </h3>
-            </div>
-            <div class="col-6">
-                <div class="float-right">
-                    <img src="../images/svg/addproj.svg" class="rounded" alt="..." width="100px" height="100px">
-                </div>
-            </div>
+<div class="container">
+    <div class="row panel-header">
+        <div class="col-6 userinfo">
+            <h3>
+                Sirish C
+                <small class="text-muted"><span class="style-dot">•</span>
+                    chejerlasirish@gmail.com
+                </small>
+            </h3>
         </div>
-        <div class="row panel-content">
-            <div class="col-12 ">
-                <% var i;
-                for (i = 0; i<9; i++) { %>
-                    <div class="row eachproj-content projinfo" onclick="window.location.href='./viewproj'">
-                        <div class="col-6 ">
-                            <h5>
-                                RNN for Chatbots<br>
-                                <small class="text-muted muted-content">Deep Learning</small>
-                                <br>
-                                <h5>
-                                    <span style="font-size: 15px">Hardware Specification : </span>
-                                    <small
-                                            class="text-muted muted-content">~NIL~
-                                    </small>
-                                    <br>
-                                    <span style="font-size: 15px">Software Specification : </span>
-                                    <small
-                                            class="text-muted muted-content">Python, TensorFlow
-                                    </small>
-                                    <br>
-                                    <span style="font-size: 15px">By : </span>
-                                    <small
-                                            class="text-muted muted-content">Sirish<span class="style-dot"> • </span>
-                                        RaviBalg<span class="style-dot"> • </span>Vigneswar<span class="style-dot"> •
-                                    </span>Gokul
-                                    </small>
-                                    <br>
-                                </h5>
-                            </h5>
-                        </div>
-                        <div class="col-3 plagpercent">
-                            <span style="font-size: 13px;line-height:70%;">Plagiarism<br>Percentage</span>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped" style="width:<%= (i + 1) * 10 %>%">
-                                    <%= (i + 1) * 10 %>%
-                                </div>
-                            </div>
-                        </div>
-                        <% if(i % 2 == 0){ %>
-                            <div class="col-3 publishedinfo">
-                                <img src="../images/svg/published.svg">
-                            </div>
-                        <% } else { %>
-                            <div class="col-3 publishedinfo">
-                                <img src="../images/svg/waiting.svg">
-
-                            </div>
-                        <% } %>
-                    </div>
-                    <hr style="border-color: #4717f6;border-width: 1.5px">
-                <% } %>
+        <div class="col-6">
+            <div class="float-right">
+                <img src="../images/svg/addproj.svg" class="rounded" alt="..." width="100px" height="100px">
             </div>
         </div>
     </div>
+    <div class="row panel-content">
+        <div class="col-12 ">
+            <% var i;
+            for (i = 0; i < data.length; i++) { %>
+            <div class="row eachproj-content projinfo"
+                 onclick="window.location.href='./viewproj?projId=<%= data[i]._id %>'">
+                <div class="col-6 ">
+                    <h5>
+                        <%= data[i].title %><br>
+                        <small class="text-muted muted-content"><%= data[i].domain %></small>
+                        <br>
+                        <h5>
+                            <span style="font-size: 15px">Hardware Specification : </span>
+                            <small
+                                    class="text-muted muted-content"><%= data[i].hwReq %>
+                            </small>
+                            <br>
+                            <span style="font-size: 15px">Software Specification : </span>
+                            <small
+                                    class="text-muted muted-content"><%= data[i].swReq %>
+                            </small>
+                            <br>
+                            <span style="font-size: 15px">By : </span>
+                            <small class="text-muted muted-content">
+                                <% for (var j = 0;j < data[i].tmName.length;j++) { %>
+                                    <%= data[i].tmName[j] %><span class="style-dot"> • </span>
+                                <% } %>
+                            </small>
+                            <br>
+                        </h5>
+                    </h5>
+                </div>
+                <div class="col-3 plagpercent">
+                    <span style="font-size: 13px;line-height:70%;">Plagiarism<br>Percentage</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" style="width:<%= data[i].plagPercent %>%">
+                            <%= data[i].plagPercent %>%
+                        </div>
+                    </div>
+                </div>
+                <% if(i % 2 == 0){ %>
+                    <div class="col-3 publishedinfo">
+                        <img src="../images/svg/published.svg">
+                    </div>
+                <% } else { %>
+                    <div class="col-3 publishedinfo">
+                        <img src="../images/svg/waiting.svg">
+
+                    </div>
+                <% } %>
+            </div>
+            <hr style="border-color: #4717f6;border-width: 1.5px">
+            <% } %>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
