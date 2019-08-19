@@ -104,7 +104,7 @@ async function getEverythingandUpload(projInfo, req, res, next) {
         // const filename = 'Local file to upload, e.g. ./local/path/to/file.txt';
         //const orgfilename = '/Users/ravibalajiaj/Sem-7/NCP/StudentRepository/Student Project Repository/public/temp/abstract';
         //filename embedded inside the upload function
-        var startpath = "/Users/ravibalajiaj/Sem-7/NCP/StudentRepository/Student Project Repository/public/temp/";
+        var startpath = "/Users/sirishc/StudentRepository/Student Project Repository/public/temp/";
 
 
         await Promise.all([
@@ -120,7 +120,6 @@ async function getEverythingandUpload(projInfo, req, res, next) {
         ]);
 
         console.log("All Files Moved!");
-
         await Promise.all([
             uploadFile(bucketName, "abstract", projId),
             uploadFile(bucketName, "teaminfo", projId),
@@ -155,14 +154,14 @@ async function getEverythingandUpload(projInfo, req, res, next) {
 }
 
 async function uploadFile(bucketName, filetype, projId) {
-    var orgfilename = "/Users/ravibalajiaj/Sem-7/NCP/StudentRepository/Student Project Repository/public/temp/" + filetype;
+    var orgfilename = "/Users/sirishc/StudentRepository/Student Project Repository/public/temp/" + filetype;
 // [START storage_upload_file]
 // Imports the Google Cloud client library
     const {Storage} = require('@google-cloud/storage');
     // Creates a client
     const storage = new Storage({
         projectId: 'nodejs-d0343',
-        keyFilename: '/Users/ravibalajiaj/Sem-7/NCP/StudentRepository/Student Project Repository/API_KEYS/NodeJS-d8633436f70b.json',
+        keyFilename: '/Users/sirishc/StudentRepository/Student Project Repository/API_keys/NodeJS-d8633436f70b.json',
     });
     /**
      * TODO(developer): Uncomment the following lines before running the sample.

@@ -10,7 +10,7 @@
   <title>Student Repository</title>
   <script>
     $(document).ready(function () {
-      // SIGN IN 
+      // SIGN IN
       $("#sbtn").click(function () {
         $("#signup").show();
         $("#signup").animate({
@@ -22,7 +22,7 @@
         }, "slow");
         $("#login").hide();
       });
-      // BACK 
+      // BACK
       $("#bk").click(function () {
         $("#login").show();
         $("#signup").animate({
@@ -55,10 +55,10 @@
     $(document).ready(function () {
       //binding click events to elements
 
-      <% if (typeof loginmsg !== "undefined") { %>
-      $('#bk').trigger('click');
+      <% if (typeof signupmsg !== "undefined") { %>
+      $('#sbtn').trigger('click');
       <% } else { %>
-      $('#signup').trigger('click');
+      $('#bk').trigger('click');
       <% } %>
 
     });

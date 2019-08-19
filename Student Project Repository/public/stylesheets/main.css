@@ -79,9 +79,13 @@ hr {
     top: 15%;
   left: 62%;
   width: 30%;
-  height: 50%;
-  border-radius: 2%;
-  box-shadow: 0px 5px 20px 0px black;
+  height: 69%;
+  border-radius: 1%;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: gray;
+
+  /*box-shadow: 0px 5px 20px 0px black;*/
 }
 
 #signup {
@@ -94,8 +98,13 @@ hr {
   left: 62%;
   width: 30%;
     height: 69%;
-  border-radius: 2%;
-  box-shadow: 0px 5px 20px 5px black;
+  border-radius: 1%;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: gray;
+}
+#sbtn,#lbtn{
+ margin-top: 50%;
 }
 
 
