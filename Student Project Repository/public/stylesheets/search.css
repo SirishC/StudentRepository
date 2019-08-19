@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Fascinate+Inline|Faster+One|Megrim|Vast+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dosis|Kanit|Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Almendra+Display|Astloch|Bangers|Stint+Ultra+Expanded&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Dosis|Teko&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap");
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+
+form {
+    padding: 1% 1%;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #4717f6;
+    border-style: solid;
+    border-width: 2px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid #4717f6;
+    border-radius: 12px;
+    line-height: 15px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 20px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #4717f6;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formbtn {
+    display: inline;
+    margin-left: 45px;
+}
+
+label, h2 {
+    font-family: "Abel", sans-serif;
+    display: block;
+}
+
+hr {
+    color: #4717f6;
+    border-style: solid;
+}
+
+.headline {
+    padding-left: 15px;
+}
+
+.header {
+    display: inline-flex;
+}
+
+body {
+    padding: 90px 75px;
+}
+
+.search {
+    width: 100%;
+    display: inline-flex;
+}
+
+img {
+    border-width: 1px;
+}
+
+#window {
+    overflow-y: scroll;
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    padding: 12px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 4px;
+}
+
+.projBlock {
+    width: 100%;
+}
+
+#searchform {
+    display: inline-flex;
+}
+
+#searchbar {
+    width: 1160px;
+    border-right: none;
+    border-width: 1px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#searchbtn {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+#searchtext {
+    color: black;
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+#sd {
+    color: #4717f6;
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.results {
+    font-size: 20px;
+    margin-left: 30px;
+    font-family: "Teko", sans-serif;
+
+}

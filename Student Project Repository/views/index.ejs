@@ -55,10 +55,10 @@
     $(document).ready(function () {
       //binding click events to elements
 
-      <% if (typeof signupmsg !== "undefined") { %>
-      $('#sbtn').trigger('click');
-      <% } else { %>
+      <% if (typeof loginmsg !== "undefined") { %>
       $('#bk').trigger('click');
+      <% } else { %>
+      $('#sbtn').trigger('click');
       <% } %>
 
     });

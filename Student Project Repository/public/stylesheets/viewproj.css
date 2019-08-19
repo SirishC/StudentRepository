@@ -37,7 +37,7 @@ body {
 }
 
 .line {
-    border-color: #4717f6;
+    border-color: #faab3d;
     border-width: 2px;
 }
 
@@ -48,13 +48,13 @@ body {
 }
 
 .teammemberinfo {
-    text-align: center;
-    border-right: 2px solid #4717f6;
+    border-right: 2px solid #faab3d;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
-.guideinfo {
-    text-align: center;
-}
 
 .viewabstract {
     width: 100%;
@@ -67,4 +67,40 @@ body {
 
 .downloadbtns {
     cursor: pointer;
+}
+
+.student {
+    margin: 20px 20px;
+    display: inline-flex;
+}
+
+.innerstudent {
+    height: 100%;
+}
+
+li {
+    margin-top: 5px;
+    height: 50px;
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    /*border-color: black;*/
+}
+
+.nameStud {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.emailStud {
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.numStud {
+    font-size: 15px;
+}
+
+.teamname {
+    display: inline-flex;
 }

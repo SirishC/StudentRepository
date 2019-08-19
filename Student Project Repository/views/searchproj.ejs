@@ -5,7 +5,7 @@
     <title>Search Project</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/template.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/search.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -19,44 +19,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    <style>
-        .headline {
-            padding-left: 15px;
-        }
-
-        .header {
-            display: inline-flex;
-        }
-
-        body {
-            padding: 90px 75px;
-        }
-
-        .search {
-            width: 100%;
-            display: inline-flex;
-        }
-
-        img {
-            border-width: 1px;
-        }
-
-        #window {
-            overflow-y: scroll;
-            position: absolute;
-            width: 90%;
-            height: 80%;
-            padding: 12px 20px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: gray;
-            border-radius: 4px;
-        }
-
-        .projBlock {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -66,15 +28,23 @@
         <span><span style="color: #4717f6; font-weight: bold;">SEARCH</span><br>PROJECT</span>
     </div>
 </div>
-
+<span id="searchtext"> search for required project using keywords</span><span id="sd">. . .</span>
 <div class="search">
-    <form action="./searchproj" method="post">
-        <img src="../images/svg/searchbtn.svg">
-        <input type="text" placeholder="Search" name="searchQuery"/>
-        <input type="submit">
-
+    <form id='searchform' action="./searchproj" method="post">
+        <input id="searchbar" type="text" placeholder="Search" name="searchQuery"/>
+        <button id="searchbtn"><img src="../images/svg/searchbtn.svg"></button>
     </form>
 </div>
+<%
+var i;
+if(typeof data !== "undefined"){ %>
+    <span class="results"><%= data.length; %> results are found </span>
+<%
+}
+else{
+%>
+    <span class="results"> 0 results are found </span>
+<% } %>
 
 <div id="window">
     <div class="projBlock">

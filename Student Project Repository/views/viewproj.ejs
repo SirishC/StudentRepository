@@ -25,7 +25,7 @@
 
 <body>
     <div class="header">
-        <a href="/home"><img src="../images/svg/back.svg"></a>
+        <a href="/home/myproj"><img src="../images/svg/back.svg"></a>
         <div class="headline" id="slider">
             <span><span style="color: #4717f6; font-weight: bold;">VIEW</span><br>PROJECT</span>
         </div>
@@ -35,36 +35,88 @@
         <div class="container">
             <h2><%= data[0].title %><br>
                 <small class="text-mutet"><span
-                            style="color: #4717f6; font-weight: bold;">❮</span> <%= data[0].domain %>
-                    <span style="color: #4717f6; font-weight: bold;">❯</span></small>
+                            style="color: #faab3d; font-weight: bold;">❮</span> <%= data[0].domain %>
+                    <span style="color: #faab3d; font-weight: bold;">❯</span></small>
             </h2>
             <hr class="line">
             <div class="row memberinfo">
                 <div class="col-6 teammemberinfo">
 
                     <ul style="list-style-type:none;">
-                        <li><strong>Team members</strong></li>
+                        <li style="text-align: center;">
+                            <strong>Team members</strong>
+                        </li>
+                        <hr>
                         <% for (var i = 0;i < data[0].tmName.length;i++) { %>
-                            <li><%= data[0].tmName[i] %></li>
+                            <li class='teamname'>
+                                <img class='studid' src="../images/svg/student.svg">
+                                <div>
+                                    <span class="nameStud"><%= data[0].tmName[i] %></span><br>
+                                    <span class="emailStud"><%= data[0].tmEmail[i] %></span>
+                                    <span class="numStud"><%= data[0].tmNum[i] %></span>
+                                </div>
+
+                            </li>
+                            <hr>
                         <% } %>
                     </ul>
 
                 </div>
                 <div class="col-6 guideinfo">
+                    <img src="../images/svg/tm.svg" width="540px" height="400px">
+                </div>
+            </div>
 
+
+            <div class="row memberinfo">
+                <div class="col-6 teammemberinfo">
+                    <img src="../images/svg/guide.svg">
+                </div>
+                <div class="col-6 guideinfo">
                     <ul style="list-style-type:none;">
-                        <li><strong>Guides</strong></li>
+                        <li style="text-align: center;">
+                            <strong>Guide Names</strong>
+                        </li>
+                        <hr>
                         <% for (var i = 0;i < data[0].guideNames.length;i++) { %>
-                            <li><%= data[0].guideNames[i] %></li>
+                            <li class='teamname'>
+                                <img class='studid' src="../images/svg/student.svg">
+                                <div>
+                                    <span class="nameStud"><%= data[0].guideNames[i] %></span>
+                                </div>
+
+                            </li>
+                            <hr>
                         <% } %>
                     </ul>
                 </div>
             </div>
-            <br>
-            <h5 style="text-align: center">Abstract</h5>
-            <iframe class="viewabstract"
-                    src="https://storage.cloud.google.com/nodejs-d0343.appspot.com/abstract_5d4ffe60d0535b64abd49beb"></iframe>
-            <br>
+
+
+            <div class="row memberinfo">
+                <div class="col-6 teammemberinfo">
+                    <ul style="list-style-type:none;">
+                        <li style="text-align: center;">
+                            <strong>Guide Names</strong>
+                        </li>
+                        <hr>
+                        <% for (var i = 0;i < data[0].guideNames.length;i++) { %>
+                            <li class='teamname'>
+                                <img class='studid' src="../images/svg/student.svg">
+                                <div>
+                                    <span class="nameStud"><%= data[0].guideNames[i] %></span>
+                                </div>
+
+                            </li>
+                            <hr>
+                        <% } %>
+                    </ul>
+
+                </div>
+                <div class="col-6 guideinfo">
+                    <img src="../images/svg/hwswspec.svg" width="540px" height="400px">
+                </div>
+            </div>
             <br>
             <h5>Files Attached</h5>
             <div class="row filedownloads">
