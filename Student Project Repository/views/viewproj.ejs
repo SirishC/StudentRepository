@@ -44,10 +44,9 @@
 
                     <ul style="list-style-type:none;">
                         <li><strong>Team members</strong></li>
-                        <li>Sirish</li>
-                        <li>Vigneswar</li>
-                        <li>Gokul</li>
-                        <li>RaviBalg</li>
+                        <% for (var i = 0;i < data[0].tmName.length;i++) { %>
+                            <li><%= data[0].tmName[i] %></li>
+                        <% } %>
                     </ul>
 
                 </div>
@@ -55,26 +54,29 @@
 
                     <ul style="list-style-type:none;">
                         <li><strong>Guides</strong></li>
-                        <li>Shanmuga Priya S</li>
-                        <li>Prathilothamai M</li>
-                        <li>Dr R Gowtham</li>
+                        <% for (var i = 0;i < data[0].guideNames.length;i++) { %>
+                            <li><%= data[0].guideNames[i] %></li>
+                        <% } %>
                     </ul>
                 </div>
             </div>
             <br>
             <h5 style="text-align: center">Abstract</h5>
             <iframe class="viewabstract"
-                    src="https://storage.cloud.google.com/nodejs-d0343.appspot.com/abstract%205d13d41eaafef9d937810919"></iframe>
+                    src="https://storage.cloud.google.com/nodejs-d0343.appspot.com/abstract_5d4ffe60d0535b64abd49beb"></iframe>
             <br>
             <br>
             <h5>Files Attached</h5>
             <div class="row filedownloads">
                 <div class="col-4">
                     Abstract<br>
-                    <img src="../images/svg/download.svg" class="downloadbtns">
+                    <a href="https://storage.cloud.google.com/nodejs-d0343.appspot.com/abstract_5d4ffe60d0535b64abd49beb"
+                       download>
+                        <img src="../images/svg/download.svg" class="downloadbtns">
+                    </a>
                 </div>
                 <div class="col-4">
-                    Team Member Info<br>
+                    Team Member Info<br/>
                     <img src="../images/svg/download.svg" class="downloadbtns">
                 </div>
                 <div class="col-4">
