@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
+// connection to the schema.
 var projDetails = require("../models/projDetails");
+var userDetails = require("../models/user");
 
 function loginReq(req, res, next) {
     if (req.session && req.session.userId) {
@@ -21,8 +23,13 @@ router.get('/', function(req, res, next) {
     console.log(query);
     projDetails.find(query)
         .then(projDetails => {
-            console.log(projDetails);
-            res.render('myproj', {title: 'My Projects', data: projDetails});
+            userDetails.find({_id: req.session.userId}).then(userinfo => {
+                console.log(projDetails);
+                res.render('myproj', {title: 'My Projects', data: projDetails, user: userinfo});
+            }).catch(err => {
+                console.log(err);
+                res.render('myproj', {title: 'My Projects', data: []});
+            })
         }).catch(err => {
         console.log(err);
         res.render('myproj', {title: 'My Projects', data: []});
